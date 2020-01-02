@@ -37,8 +37,8 @@ type GetDeviceResponse struct {
 		Sub    bool   `json:"sub"`
 		Model  string `json:"model"`
 		Status []struct {
-			Code  string `json:"code"`
-			Value string `json:"value"`
+			Code  string      `json:"code"`
+			Value interface{} `json:"value"`
 		} `json:"status"`
 		Category   string `json:"category"`
 		Online     bool   `json:"online"`

@@ -30,8 +30,8 @@ type GetDeviceStatusResponse struct {
 	Success bool  `json:"success"`
 	T       int64 `json:"t"`
 	Result  []struct {
-		Code  string `json:"code"`
-		Value string `json:"value"`
+		Code  string      `json:"code"`
+		Value interface{} `json:"value"`
 	} `json:"result"`
 
 	// error info
