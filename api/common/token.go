@@ -25,6 +25,9 @@ func SetToken(token, refreshToken string, expire int) {
 }
 
 func GetRefreshToken() (string, error) {
+	if LocalToken.RefreshToken != "" {
+		return LocalToken.RefreshToken, nil
+	}
 	_, err := GetToken()
 	if err != nil {
 		return "", err
@@ -42,7 +45,7 @@ func GetToken() (string, error) {
 		return t, nil
 	}
 	tylog.SugarLog.Info("without token, the token will be pulled again")
-	if t == "" {
+	if t == "" || LocalToken.RefreshToken == "" {
 		_, err := GetTokenAPI()
 		if err != nil {
 			return "", err
