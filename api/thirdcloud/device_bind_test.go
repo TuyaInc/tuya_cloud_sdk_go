@@ -21,7 +21,10 @@ var (
 )
 
 func TestPostDevicesBind(t *testing.T) {
-	resp, err := PostDevicesBind(ThirdCloudDeviceId, CountryCode, AppSchema, TuyaUsername, TuyaProductId, ParentDeviceId)
+	resp, err := PostDevicesBind(common.Ed.TestDataThirdCloudDeviceId, common.Ed.TestDataCountryCode,
+		common.Ed.TestDataAppSchema, common.Ed.TestDataTuyaUsername,
+		common.Ed.TestDataTuyaProductId, common.Ed.TestDataParentDeviceId,
+	)
 	if err != nil {
 		t.Errorf("PostDevicesBind req has err:%v,resp:%v \n", err, resp)
 	}
