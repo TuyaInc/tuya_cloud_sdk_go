@@ -40,15 +40,16 @@ type GetDeviceResponse struct {
 			Code  string      `json:"code"`
 			Value interface{} `json:"value"`
 		} `json:"status"`
-		Category   string `json:"category"`
-		Online     bool   `json:"online"`
-		ID         string `json:"id"`
-		TimeZone   string `json:"time_zone"`
-		LocalKey   string `json:"local_key"`
-		UpdateTime int    `json:"update_time"`
-		ActiveTime int    `json:"active_time"`
-		OwnerID    string `json:"owner_id"`
-		ProductID  string `json:"product_id"`
+		Category    string `json:"category"`
+		Online      bool   `json:"online"`
+		ID          string `json:"id"`
+		TimeZone    string `json:"time_zone"`
+		LocalKey    string `json:"local_key"`
+		UpdateTime  int    `json:"update_time"`
+		ActiveTime  int    `json:"active_time"`
+		OwnerID     string `json:"owner_id"`
+		ProductID   string `json:"product_id"`
+		ProductName string `json:"product_name"`
 	} `json:"result"`
 
 	// error info
