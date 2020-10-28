@@ -39,8 +39,8 @@ func GetBrandsByRemoteIndex(infraredID string, categoryId, remoteIndex int, regi
 type GetBrandsByRemoteIndexResponse struct {
 	Success bool  `json:"success"`
 	T       int64 `json:"t"`
-	Result  struct {
-		BrandId   int    `json:"brand_id"`
+	Result  []struct {
+		BrandID   int    `json:"brand_id"`
 		BrandName string `json:"brand_name"`
 	} `json:"result"`
 

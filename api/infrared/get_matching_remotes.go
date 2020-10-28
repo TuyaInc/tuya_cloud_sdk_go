@@ -16,7 +16,7 @@ func (t *GetMatchingRemotesReq) Method() string {
 }
 
 func (t *GetMatchingRemotesReq) API() string {
-	return fmt.Sprintf("/v1.0/infrareds/%s/matching-codes?token=%s", t.InfraredID, t.Token)
+	return fmt.Sprintf("/v1.0/infrareds/%s/matching-remotes?token=%s", t.InfraredID, t.Token)
 }
 
 // GetMatchingRemotes sets infrared learning mode

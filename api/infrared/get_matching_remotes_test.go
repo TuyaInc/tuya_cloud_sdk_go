@@ -25,7 +25,7 @@ func TestGetMatchingRemotes(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			tokenResponse, err := PostmatchingRemotesToken(tt.args.InfraredID, 5, "", "xxxxx")
+			tokenResponse, err := PostMatchingRemotesToken(tt.args.InfraredID, 5, "", "xxxxx")
 			if err != nil {
 				t.Errorf("PutLearningState() error = %v", err)
 				return
