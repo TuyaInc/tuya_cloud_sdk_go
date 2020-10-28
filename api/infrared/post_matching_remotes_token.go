@@ -27,20 +27,20 @@ func (t *PostMatchingRemotesTokenReq) Body() []byte {
 	return reqBody
 }
 
-// PostmatchingRemotesToken sets infrared learning mode
-func PostmatchingRemotesToken(infraredID string, categoryId int, preToken, code string) (*PostmatchingRemotesTokenResponse, error) {
+// PostMatchingRemotesToken sets infrared learning mode
+func PostMatchingRemotesToken(infraredID string, categoryId int, preToken, code string) (*PostMatchingRemotesTokenResponse, error) {
 	a := &PostMatchingRemotesTokenReq{
 		InfraredID: infraredID,
 		CategoryId: categoryId,
 		PreToken:   preToken,
 		Code:       code,
 	}
-	resp := &PostmatchingRemotesTokenResponse{}
+	resp := &PostMatchingRemotesTokenResponse{}
 	err := common.DoAPIRequest(a, resp)
 	return resp, err
 }
 
-type PostmatchingRemotesTokenResponse struct {
+type PostMatchingRemotesTokenResponse struct {
 	Success bool  `json:"success"`
 	T       int64 `json:"t"`
 	Result  struct {

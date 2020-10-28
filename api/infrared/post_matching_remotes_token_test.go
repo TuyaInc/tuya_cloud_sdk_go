@@ -6,7 +6,7 @@ import (
 	"github.com/TuyaInc/tuya_cloud_sdk_go/api/common"
 )
 
-func TestPostmatchingRemotesToken(t *testing.T) {
+func TestPostMatchingRemotesToken(t *testing.T) {
 	deviceID := common.Ed.TestDataDeviceID
 	type args struct {
 		InfraredID string
@@ -17,7 +17,7 @@ func TestPostmatchingRemotesToken(t *testing.T) {
 	tests := []struct {
 		name    string
 		args    args
-		want    *PostmatchingRemotesTokenResponse
+		want    *PostMatchingRemotesTokenResponse
 		wantErr bool
 	}{
 		{
@@ -27,9 +27,9 @@ func TestPostmatchingRemotesToken(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := PostmatchingRemotesToken(tt.args.InfraredID, tt.args.CategoryID, tt.args.PreToken, tt.args.Code)
+			got, err := PostMatchingRemotesToken(tt.args.InfraredID, tt.args.CategoryID, tt.args.PreToken, tt.args.Code)
 			if (err != nil) != tt.wantErr {
-				t.Errorf("PostmatchingRemotesToken() error = %v, wantErr %v", err, tt.wantErr)
+				t.Errorf("PostMatchingRemotesToken() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 			if got != nil && !got.Success {
