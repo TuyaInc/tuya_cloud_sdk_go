@@ -2,7 +2,8 @@ package common
 
 // cn
 const URLCN = "https://openapi.tuyacn.com"
-const URLCNPre = "https://openapi-cn.wgine.com"
+
+// const URLCNPre = "https://openapi-cn.wgine.com"
 
 // us
 const URLUS = "https://openapi.tuyaus.com"
