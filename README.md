@@ -1,5 +1,8 @@
 # 涂鸦云云对接API SDK golang版本
 
+## 仓库迁移说明
+该仓库已经停止更新，请使用`https://github.com/tuya/tuya-cloud-sdk-go`
+
 ## 使用前需要做
 
 1. 确定`serverHOST、AccessID、AccessKey`这些值
