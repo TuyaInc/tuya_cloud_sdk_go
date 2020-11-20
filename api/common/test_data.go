@@ -40,7 +40,7 @@ func SetTestEnv() {
 	} else {
 		log.Println("load test data success")
 	}
-	config.SetEnv(URLCNPre, Ed.TestDataAccessID, Ed.TestDataAccessKey)
+	config.SetEnv(URLCN, Ed.TestDataAccessID, Ed.TestDataAccessKey)
 	log.Printf("test env ###### init success,Ed:%v\n", Ed)
 }
 
